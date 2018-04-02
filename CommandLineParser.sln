@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27520.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineParser", "CommandLineParser\CommandLineParser.csproj", "{478B1A6D-B7AE-451E-971C-E32E82B2E444}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPTest", "CPTest\CPTest.csproj", "{FFA67711-566D-4ADA-9701-B9212EFC9F36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{478B1A6D-B7AE-451E-971C-E32E82B2E444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{478B1A6D-B7AE-451E-971C-E32E82B2E444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{478B1A6D-B7AE-451E-971C-E32E82B2E444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{478B1A6D-B7AE-451E-971C-E32E82B2E444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFA67711-566D-4ADA-9701-B9212EFC9F36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA67711-566D-4ADA-9701-B9212EFC9F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA67711-566D-4ADA-9701-B9212EFC9F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA67711-566D-4ADA-9701-B9212EFC9F36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FBF0216-716D-45F4-99D7-DC6E42323B37}
+	EndGlobalSection
+EndGlobal
