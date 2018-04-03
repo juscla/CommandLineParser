@@ -1,25 +1,55 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using CommandLineParser;
-
-namespace CPTest
+﻿namespace CPTest
 {
-    class Program
+    using System;
+
+    using CommandLineParser;
+
+    /// <summary>
+    /// The program.
+    /// </summary>
+    public class Program
     {
+        /// <summary>
+        /// The main.
+        /// </summary>
+        /// <param name="args">
+        /// The args.
+        /// </param>
         public static void Main(string[] args)
         {
-            var result = args.Parse<Tester>(1);
+            var result = args.Parse<Tester>();
+            Console.WriteLine(result.Time.ToSimpleString(CommandLineParser.TimeSpanTypes.Days));
         }
 
+        /// <summary>
+        /// The tester.
+        /// </summary>
         public class Tester
         {
-            public int interations { get; set; }
+            /// <summary>
+            /// Gets or sets the iterations.
+            /// </summary>
+            public int Iterations { get; set; }
 
+            /// <summary>
+            /// Gets or sets the output.
+            /// </summary>
             public string Output { get; set; }
 
-            public string inputes { get; set; }
+            /// <summary>
+            /// Gets or sets the inputs.
+            /// </summary>
+            public string Inputs { get; set; }
+
+            /// <summary>
+            /// Gets or sets the time.
+            /// </summary>
+            public TimeSpan Time { get; set; }
+
+            /// <summary>
+            /// Gets or sets the script.
+            /// </summary>
+            public string[] Script { get; set; }
         }
     }
 }
