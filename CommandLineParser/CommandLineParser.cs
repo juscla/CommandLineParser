@@ -3,6 +3,7 @@
     using System;
     using System.Collections;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.Linq;
     using System.Reflection;
 
@@ -50,6 +51,30 @@
             /// Day use D
             /// </summary>
             Days = 'D'
+        }
+
+        public static bool IsValidInstance(this object source)
+        {
+            foreach (var p in source.GetType().GetProperties().Where(x => x.GetCustomAttributes<RequiredAttribute>().Any()))
+            {
+                if (p.GetValue(source).Equals(p.GetDefaultValueForProperty()))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        public static object GetDefaultValueForProperty(this PropertyInfo property)
+        {
+            var a = property.GetCustomAttributes<DefaultValueAttribute>().FirstOrDefault();
+            if (a != null)
+            {
+                return a.Value;
+            }
+
+            return property.PropertyType.IsValueType ? Activator.CreateInstance(property.PropertyType) : null;
         }
 
         /// <summary>
@@ -411,5 +436,10 @@
 
             return distance[a.Length, b.Length];
         }
+    }
+
+    public class RequiredAttribute : Attribute
+    {
+
     }
 }
